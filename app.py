@@ -133,7 +133,7 @@ st.subheader('altair_chart')
 df = pd.DataFrame(rng(0).standard_normal((60, 3)), columns=["a", "b", "c"])
 
 chart = (
-    alt.Chart(chart_data)
+    alt.Chart(df)
     .mark_circle()
     .encode(x="a", y="b", size="c", color="c", tooltip=["a", "b", "c"])
 )
@@ -147,3 +147,12 @@ option = st.selectbox(
      ('Blue', 'Red', 'Green'))
 
 st.write('Your favorite color is ', option)
+
+st.header('st.multiselect')
+
+options = st.multiselect(
+     'What are your favorite colors',
+     ['Green', 'Yellow', 'Red', 'Blue'],
+     ['Yellow', 'Red'])
+
+st.write('You selected:', options)
