@@ -134,7 +134,7 @@ df = pd.DataFrame(rng(0).standard_normal((60, 3)), columns=["a", "b", "c"])
 
 chart = (
     alt.Chart(chart_data)
-    .mark_circle()
+    .mark_line()
     .encode(x="a", y="b", size="c", color="c", tooltip=["a", "b", "c"])
 )
 
