@@ -63,3 +63,6 @@ st.markdown('''{md}''')
 """)
 
 st.markdown(md)
+
+st.caption("This is a string that explains something above.")
+st.caption("A caption with _italics_ :blue[colors] and emojis :sunglasses:")
