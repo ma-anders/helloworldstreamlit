@@ -102,3 +102,19 @@ start_time = st.slider(
      value=datetime(2020, 1, 1, 9, 30),
      format="MM/DD/YY - hh:mm")
 st.write("Start time:", start_time)
+
+st.subheader('Color select_slider')
+
+color = st.select_slider(
+    "Select a color of the rainbow",
+    options=[
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "indigo",
+        "violet",
+    ],
+)
+st.write("My favorite color is", color)
