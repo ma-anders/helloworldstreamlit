@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+from numpy.random import default_rng as rng
 import altair as alt
 import pandas as pd
 from datetime import time, datetime
@@ -126,3 +127,15 @@ chart_data = pd.DataFrame(
      columns=['a', 'b', 'c'])
 
 st.line_chart(chart_data)
+
+st.subheader('altair_chart')
+
+df = pd.DataFrame(rng(0).standard_normal((60, 3)), columns=["a", "b", "c"])
+
+chart = (
+    alt.Chart(chart_data)
+    .mark_circle()
+    .encode(x="a", y="b", size="c", color="c", tooltip=["a", "b", "c"])
+)
+
+st.altair_chart(chart)
