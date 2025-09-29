@@ -1,11 +1,8 @@
-pip install streamlit_pandas_profiling
-
 import streamlit as st
 import numpy as np
 from numpy.random import default_rng as rng
 import altair as alt
 import pandas as pd
-import pandas_profiling
 from streamlit_pandas_profiling import st_profile_report
 from datetime import time, datetime
 
