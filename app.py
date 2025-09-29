@@ -155,7 +155,6 @@ options = st.multiselect(
      ['Green', 'Yellow', 'Red', 'Blue'],
      ['Yellow', 'Red'], 
      max_selection=5,
-     accept_new_options=True,
-)
+     accept_new_options=True)
 
 st.write('You selected:', options)
