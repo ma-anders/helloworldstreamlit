@@ -153,7 +153,8 @@ st.header('st.multiselect')
 options = st.multiselect(
      'What are your favorite colors',
      ['Green', 'Yellow', 'Red', 'Blue'],
-     ['Yellow', 'Red'], max_selection=5,
+     ['Yellow', 'Red'], 
+     max_selection=5,
      accept_new_options=True,
 )
 
