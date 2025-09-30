@@ -3,7 +3,7 @@ import numpy as np
 from numpy.random import default_rng as rng
 import altair as alt
 import pandas as pd
-import ydata_profiling
+from ydata_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
 from datetime import time, datetime
 
@@ -183,5 +183,5 @@ st.header('`streamlit_pandas_profiling`')
 
 df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
 
-pr = df.profile_report()
-st_profile_report(pr)
+profile = ProfileReport(df, title="Profiling Report")
+st_profile_report(profile)
