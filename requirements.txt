@@ -1,3 +1,2 @@
 streamlit_pandas_profiling
 ydata-profiling
-pkg_resources
